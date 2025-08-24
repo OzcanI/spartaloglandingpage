@@ -451,9 +451,11 @@ export default function Home() {
               </span>
             </div>
             <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6 text-gray-400 text-center sm:text-left">
-              <a href="#" className="hover:text-[#02cf68] transition-colors">Privacy</a>
-              <a href="#" className="hover:text-[#02cf68] transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-[#02cf68] transition-colors">Contact</a>
+              <a href="/privacy-policy" className="hover:text-[#02cf68] transition-colors">Privacy Policy</a>
+              <a href="/privacy-policy-en" className="hover:text-[#02cf68] transition-colors">Privacy Policy (EN)</a>
+              <a href="/terms" className="hover:text-[#02cf68] transition-colors">Terms & Conditions</a>
+              <a href="/terms-en" className="hover:text-[#02cf68] transition-colors">Terms & Conditions (EN)</a>
+              <a href="mailto:ibosnfs1997@gmail.com" className="hover:text-[#02cf68] transition-colors">Contact</a>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
