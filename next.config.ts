@@ -3,8 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: 'export',
   trailingSlash: true,
-  basePath: '/spartaloglandingpage',
-  assetPrefix: '/spartaloglandingpage/',
+  basePath: '',
+  assetPrefix: '/',
   images: {
     unoptimized: true
   }

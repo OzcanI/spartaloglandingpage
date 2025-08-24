@@ -27,9 +27,9 @@ export const metadata: Metadata = {
   },
   robots: 'index, follow',
   icons: {
-    icon: '/spartaloglandingpage/images/logo.png',
-    shortcut: '/spartaloglandingpage/images/logo.png',
-    apple: '/spartaloglandingpage/images/logo.png',
+    icon: '/images/logo.png',
+    shortcut: '/images/logo.png',
+    apple: '/images/logo.png',
   },
 }
 

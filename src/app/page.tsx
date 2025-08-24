@@ -40,7 +40,7 @@ export default function Home() {
             >
               <div className="relative">
                 <Image
-                  src="/spartaloglandingpage/images/logo.png"
+                  src="/images/logo.png"
                   alt="SpartaLog"
                   width={40}
                   height={40}
@@ -306,10 +306,10 @@ export default function Home() {
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
             {[
-              { src: "/spartaloglandingpage/images/1255@3x.png", alt: "Main Screen", title: "Main Screen" },
-              { src: "/spartaloglandingpage/images/1256@3x.png", alt: "Workout Detail", title: "Workout Detail" },
-              { src: "/spartaloglandingpage/images/1257@3x.png", alt: "Statistics", title: "Statistics" },
-              { src: "/spartaloglandingpage/images/1258@3x.png", alt: "Profile", title: "Profile" }
+              { src: "/images/1255@3x.png", alt: "Main Screen", title: "Main Screen" },
+              { src: "/images/1256@3x.png", alt: "Workout Detail", title: "Workout Detail" },
+              { src: "/images/1257@3x.png", alt: "Statistics", title: "Statistics" },
+              { src: "/images/1258@3x.png", alt: "Profile", title: "Profile" }
             ].map((screenshot, index) => (
               <motion.div
                 key={index}
@@ -440,7 +440,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-3 mb-4 md:mb-0">
               <Image
-                src="/spartaloglandingpage/images/logo.png"
+                src="/images/logo.png"
                 alt="SpartaLog"
                 width={32}
                 height={32}
