@@ -1,8 +1,13 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
 
 export const metadata: Metadata = {
   title: 'SpartaLog - AI Destekli Fitness Takip Uygulaması',
@@ -20,12 +25,11 @@ export const metadata: Metadata = {
     title: 'SpartaLog - AI Destekli Fitness Takip',
     description: 'AI teknolojisi ile güçlendirilmiş fitness takip uygulaması',
   },
-  viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/favicon.ico',
+    icon: '/spartaloglandingpage/images/logo.png',
+    shortcut: '/spartaloglandingpage/images/logo.png',
+    apple: '/spartaloglandingpage/images/logo.png',
   },
 }
 

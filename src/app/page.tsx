@@ -306,10 +306,10 @@ export default function Home() {
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
             {[
-              { src: "/images/1255@3x.png", alt: "Main Screen", title: "Main Screen" },
-              { src: "/images/1256@3x.png", alt: "Workout Detail", title: "Workout Detail" },
-              { src: "/images/1257@3x.png", alt: "Statistics", title: "Statistics" },
-              { src: "/images/1258@3x.png", alt: "Profile", title: "Profile" }
+              { src: "/spartaloglandingpage/images/1255@3x.png", alt: "Main Screen", title: "Main Screen" },
+              { src: "/spartaloglandingpage/images/1256@3x.png", alt: "Workout Detail", title: "Workout Detail" },
+              { src: "/spartaloglandingpage/images/1257@3x.png", alt: "Statistics", title: "Statistics" },
+              { src: "/spartaloglandingpage/images/1258@3x.png", alt: "Profile", title: "Profile" }
             ].map((screenshot, index) => (
               <motion.div
                 key={index}
