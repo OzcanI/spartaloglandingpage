@@ -1,103 +1,466 @@
-import Image from "next/image";
+'use client'
+
+import { motion } from 'framer-motion'
+import { useState } from 'react'
+import { 
+  Brain, 
+  TrendingUp, 
+  Target, 
+  Users, 
+  Zap, 
+  Shield,
+  Download,
+  Star,
+  ArrowRight,
+  CheckCircle,
+  Play,
+  Smartphone,
+  BarChart3,
+  Dumbbell,
+  Sparkles,
+  Menu,
+  X
+} from 'lucide-react'
+import Image from 'next/image'
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+  return (
+    <div className="min-h-screen bg-black text-white overflow-x-hidden">
+      {/* Navigation */}
+      <nav className="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <motion.div 
+              className="flex items-center space-x-3"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="relative">
+                <Image
+                  src="/images/logo.png"
+                  alt="SpartaLog"
+                  width={40}
+                  height={40}
+                  className="rounded-lg shadow-lg"
+                />
+              </div>
+              <span className="text-xl font-bold text-[#02cf68]">
+                SpartaLog
+              </span>
+            </motion.div>
+            
+            {/* Desktop Menu */}
+            <motion.div 
+              className="hidden md:flex items-center space-x-8"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <a href="#features" className="hover:text-[#02cf68] transition-colors duration-300">
+                Features
+              </a>
+              <a href="#screenshots" className="hover:text-[#02cf68] transition-colors duration-300">
+                Screenshots
+              </a>
+              <a href="#download" className="hover:text-[#02cf68] transition-colors duration-300">
+                Download
+              </a>
+            </motion.div>
+
+            {/* Mobile Menu Button */}
+            <motion.button
+              className="md:hidden p-2 rounded-lg hover:bg-gray-800 transition-colors"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </motion.button>
+          </div>
+
+          {/* Mobile Menu */}
+          <motion.div
+            className={`md:hidden overflow-hidden transition-all duration-300 ${
+              isMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
+            }`}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <div className="py-4 space-y-4 border-t border-gray-800">
+              <a 
+                href="#features" 
+                className="block hover:text-[#02cf68] transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Features
+              </a>
+              <a 
+                href="#screenshots" 
+                className="block hover:text-[#02cf68] transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Screenshots
+              </a>
+              <a 
+                href="#download" 
+                className="block hover:text-[#02cf68] transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Download
+              </a>
+            </div>
+          </motion.div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            {/* Badge */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="inline-flex items-center space-x-2 bg-[#02cf68]/10 border border-[#02cf68]/20 rounded-full px-4 py-2 mb-8"
+            >
+              <Sparkles className="w-4 h-4 text-[#02cf68]" />
+              <span className="text-[#02cf68] text-sm font-medium">AI-Powered Fitness Tracking</span>
+            </motion.div>
+
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight">
+              <motion.span 
+                className="text-[#02cf68]"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+              >
+                AI-Powered
+              </motion.span>
+              <br />
+              <motion.span 
+                className="text-white"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
+              >
+                Fitness Tracking
+              </motion.span>
+            </h1>
+            
+            <motion.p 
+              className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed px-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.9 }}
+            >
+              Track your workouts with AI technology, monitor your progress, and achieve your fitness goals with SpartaLog.
+            </motion.p>
+
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.1 }}
+            >
+              <motion.button
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full sm:w-auto bg-[#02cf68] text-black px-8 py-4 rounded-full font-semibold text-lg flex items-center justify-center space-x-2 hover:bg-[#02cf68]/90 transition-all duration-300 group"
+              >
+                <Download size={20} />
+                <span>Download Now</span>
+                <ArrowRight size={20} />
+              </motion.button>
+              
+              <motion.button
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full sm:w-auto border border-gray-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:border-[#02cf68] hover:text-[#02cf68] transition-all duration-300 group bg-gray-900 flex items-center justify-center space-x-2"
+              >
+                <Play size={20} />
+                <span>Watch Demo</span>
+              </motion.button>
+            </motion.div>
+
+            {/* Stats Preview */}
+            <motion.div 
+              className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 mt-12 text-center px-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.3 }}
+            >
+              <div className="text-center">
+                <div className="text-2xl font-bold text-[#02cf68]">10K+</div>
+                <div className="text-sm text-gray-400">Active Users</div>
+              </div>
+              <div className="hidden sm:block w-px h-8 bg-gray-600"></div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-[#02cf68]">50K+</div>
+                <div className="text-sm text-gray-400">Workouts</div>
+              </div>
+              <div className="hidden sm:block w-px h-8 bg-gray-600"></div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-[#02cf68]">4.8★</div>
+                <div className="text-sm text-gray-400">Rating</div>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section id="features" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 relative">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+              Why <span className="text-[#02cf68]">SpartaLog</span>?
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
+              AI-powered fitness tracking application with advanced features
+            </p>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {[
+              {
+                icon: Brain,
+                title: "AI Analysis",
+                description: "Analyze your workout notes with AI and create detailed exercise plans"
+              },
+              {
+                icon: TrendingUp,
+                title: "Progress Tracking",
+                description: "Track your weight, sets, and reps data with visual charts"
+              },
+              {
+                icon: Target,
+                title: "Goal Setting",
+                description: "Set personal goals and get AI-powered recommendations"
+              },
+              {
+                icon: Users,
+                title: "Community",
+                description: "Connect with other athletes and boost your motivation"
+              },
+              {
+                icon: Zap,
+                title: "Quick Recording",
+                description: "Create workout records quickly with voice notes"
+              },
+              {
+                icon: Shield,
+                title: "Secure",
+                description: "Your data is stored safely and encrypted"
+              }
+            ].map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+                className="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-[#02cf68] transition-all duration-300 hover:bg-gray-800/70 group"
+              >
+                <div className="w-12 h-12 rounded-lg bg-[#02cf68] p-2 mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="w-full h-full text-black" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Screenshots Section */}
+      <section id="screenshots" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+              App <span className="text-[#02cf68]">Interface</span>
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-300">
+              Modern and user-friendly interface
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
+            {[
+              { src: "/images/1255@3x.png", alt: "Main Screen", title: "Main Screen" },
+              { src: "/images/1256@3x.png", alt: "Workout Detail", title: "Workout Detail" },
+              { src: "/images/1257@3x.png", alt: "Statistics", title: "Statistics" },
+              { src: "/images/1258@3x.png", alt: "Profile", title: "Profile" }
+            ].map((screenshot, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -10 }}
+                className="relative group"
+              >
+                <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                  <Image
+                    src={screenshot.src}
+                    alt={screenshot.alt}
+                    width={400}
+                    height={800}
+                    className="w-full h-auto transform group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute bottom-4 left-4 right-4 text-center">
+                    <h3 className="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm sm:text-base">
+                      {screenshot.title}
+                    </h3>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 relative">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 text-center">
+            {[
+              { number: "10K+", label: "Active Users", icon: Users },
+              { number: "50K+", label: "Workout Records", icon: Dumbbell },
+              { number: "4.8", label: "App Rating", icon: Star }
+            ].map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+                className="p-6 rounded-xl bg-gray-800 border border-gray-700"
+              >
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#02cf68] mb-2 flex items-center justify-center">
+                  <stat.icon className="w-6 h-6 sm:w-8 sm:h-8 mr-2" />
+                  {stat.number}
+                </div>
+                <p className="text-gray-300 text-base sm:text-lg">{stat.label}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Download Section */}
+      <section id="download" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+              Get <span className="text-[#02cf68]">Started</span>
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-300 mb-8">
+              Download SpartaLog and start your AI-powered fitness journey
+            </p>
+            
+            <div className="bg-gray-800 p-6 sm:p-8 rounded-2xl border border-gray-700">
+              <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-center">
+                <div className="text-left">
+                  <h3 className="text-xl sm:text-2xl font-semibold mb-4">Features</h3>
+                  <ul className="space-y-3">
+                    {[
+                      "AI-powered workout analysis",
+                      "Visual progress charts",
+                      "Voice note recording",
+                      "Goal setting and tracking",
+                      "Secure data storage",
+                      "Free to use"
+                    ].map((feature, index) => (
+                      <motion.li 
+                        key={index} 
+                        className="flex items-center space-x-3"
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        viewport={{ once: true }}
+                      >
+                        <CheckCircle className="w-5 h-5 text-[#02cf68] flex-shrink-0" />
+                        <span className="text-gray-300 text-sm sm:text-base">{feature}</span>
+                      </motion.li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div className="text-center">
+                  <motion.button
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="w-full sm:w-auto bg-[#02cf68] text-black px-6 sm:px-8 py-4 rounded-full font-semibold text-base sm:text-lg flex items-center justify-center space-x-2 mx-auto hover:bg-[#02cf68]/90 transition-all duration-300 group"
+                  >
+                    <Smartphone size={20} />
+                    <span>Download from App Store</span>
+                    <ArrowRight size={20} />
+                  </motion.button>
+                  <p className="text-xs sm:text-sm text-gray-400 mt-4">
+                    Requires iOS 13.0 or later
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-12 px-4 sm:px-6 lg:px-8 bg-black border-t border-gray-800">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex items-center space-x-3 mb-4 md:mb-0">
+              <Image
+                src="/images/logo.png"
+                alt="SpartaLog"
+                width={32}
+                height={32}
+                className="rounded-lg"
+              />
+              <span className="text-lg font-bold text-[#02cf68]">
+                SpartaLog
+              </span>
+            </div>
+            <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6 text-gray-400 text-center sm:text-left">
+              <a href="#" className="hover:text-[#02cf68] transition-colors">Privacy</a>
+              <a href="#" className="hover:text-[#02cf68] transition-colors">Terms of Service</a>
+              <a href="#" className="hover:text-[#02cf68] transition-colors">Contact</a>
+            </div>
+          </div>
+          <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+            <p>&copy; 2024 SpartaLog. All rights reserved.</p>
+          </div>
+        </div>
       </footer>
     </div>
-  );
+  )
 }
