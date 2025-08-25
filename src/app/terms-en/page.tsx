@@ -14,7 +14,7 @@ export default function TermsEnPage() {
           
           <div className="prose prose-lg max-w-none prose-invert">
             <p className="text-sm text-gray-400 mb-6">
-              <strong>Last Updated:</strong> December 15, 2024
+              <strong>Last Updated:</strong> August 25, 2025
             </p>
 
             <section className="mb-8">
@@ -170,7 +170,7 @@ export default function TermsEnPage() {
                 If you have any questions about these terms of use, please contact us:
               </p>
               <div className="bg-gray-800 p-4 rounded-lg border border-gray-700">
-                <p className="text-gray-300"><strong>Developer:</strong> İbrahim Özcan</p>
+                <p className="text-gray-300"><strong>Developer:</strong> İbrahim Özcan - The developer and provider of the SpartaLog application</p>
                 <p className="text-gray-300"><strong>Email:</strong> ibosnfs1997@gmail.com</p>
                 <p className="text-gray-300"><strong>Address:</strong> Bursa, Turkey</p>
               </div>

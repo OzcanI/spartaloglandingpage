@@ -36,18 +36,6 @@ export const translations = {
         {
           title: 'Goal Setting',
           description: 'Set personal goals and get AI-powered recommendations'
-        },
-        {
-          title: 'Community',
-          description: 'Connect with other athletes and boost your motivation'
-        },
-        {
-          title: 'Quick Recording',
-          description: 'Create workout records quickly with voice notes'
-        },
-        {
-          title: 'Secure',
-          description: 'Your data is stored safely and encrypted'
         }
       ]
     },
@@ -58,8 +46,8 @@ export const translations = {
       items: [
         { title: 'Main Screen' },
         { title: 'Workout Detail' },
-        { title: 'Statistics' },
-        { title: 'Profile' }
+        { title: 'Previous Workouts' },
+        { title: 'Add/Edit Workout' }
       ]
     },
     stats: {
@@ -80,7 +68,6 @@ export const translations = {
           'Visual progress charts',
           'Voice note recording',
           'Goal setting and tracking',
-          'Secure data storage',
           'Free to use'
         ]
       },
@@ -88,10 +75,53 @@ export const translations = {
       requirements: 'Requires iOS 13.0 or later'
     },
     footer: {
-      copyright: '© 2024 SpartaLog. All rights reserved.',
+      copyright: '© 2025 SpartaLog. All rights reserved.',
       privacyPolicy: 'Privacy Policy',
       termsConditions: 'Terms & Conditions',
       contact: 'Contact'
+    },
+    contact: {
+      title: 'Contact',
+      subtitle: 'Get in touch with us for questions, suggestions, or feedback about SpartaLog.',
+      backToHome: 'Back to Home',
+      contactInfo: 'Contact Information',
+      email: 'Email',
+      emailValue: 'ibosnfs1997@gmail.com',
+      emailDesc: 'Send email for fastest response',
+      address: 'Address',
+      addressValue: 'Bursa, Turkey',
+      addressDesc: 'Developer office',
+      responseTime: 'Response Time',
+      responseTimeValue: '24-48 hours',
+      responseTimeDesc: 'We respond within business days',
+      faq: 'Frequently Asked Questions',
+      faqItems: [
+        { question: 'Is the app free?', answer: 'Yes, SpartaLog is completely free.' },
+        { question: 'Which platforms are supported?', answer: 'Currently being developed for iOS.' },
+        { question: 'Is my data secure?', answer: 'Yes, all your data is stored encrypted.' }
+      ],
+      sendMessage: 'Send Message',
+      form: {
+        fullName: 'Full Name',
+        fullNamePlaceholder: 'Your full name',
+        email: 'Email',
+        emailPlaceholder: 'example@email.com',
+        subject: 'Subject',
+        selectSubject: 'Select subject',
+        subjects: {
+          general: 'General Question',
+          bug: 'Bug Report',
+          feature: 'Feature Request',
+          support: 'Technical Support',
+          other: 'Other'
+        },
+        message: 'Message',
+        messagePlaceholder: 'Write your message here...',
+        send: 'Send Message',
+        note: 'This form is currently for demo purposes. Please use our email address for real contact.'
+      },
+      about: 'About SpartaLog',
+      aboutDesc: 'SpartaLog is an AI-powered fitness tracking application. It analyzes your workouts, tracks your progress, and helps you achieve your fitness goals.'
     }
   },
   tr: {
@@ -127,20 +157,8 @@ export const translations = {
           description: 'Kilo, set ve tekrar verilerinizi görsel grafiklerle takip edin'
         },
         {
-          title: 'Hedef Belirleme',
-          description: 'Kişisel hedefler belirleyin ve AI destekli öneriler alın'
-        },
-        {
-          title: 'Topluluk',
-          description: 'Diğer sporcularla bağlantı kurun ve motivasyonunuzu artırın'
-        },
-        {
           title: 'Hızlı Kayıt',
           description: 'Sesli notlarla hızlıca antrenman kaydı oluşturun'
-        },
-        {
-          title: 'Güvenli',
-          description: 'Verileriniz güvenli ve şifrelenmiş olarak saklanır'
         }
       ]
     },
@@ -151,8 +169,8 @@ export const translations = {
       items: [
         { title: 'Ana Ekran' },
         { title: 'Antrenman Detayı' },
-        { title: 'İstatistikler' },
-        { title: 'Profil' }
+        { title: 'Önceki Antrenmanlar' },
+        { title: 'Antrenman Ekle/Düzenle' }
       ]
     },
     stats: {
@@ -173,7 +191,6 @@ export const translations = {
           'Görsel ilerleme grafikleri',
           'Sesli not kaydı',
           'Hedef belirleme ve takip',
-          'Güvenli veri saklama',
           'Ücretsiz kullanım'
         ]
       },
@@ -181,10 +198,53 @@ export const translations = {
       requirements: 'iOS 13.0 veya üstü gereklidir'
     },
     footer: {
-      copyright: '© 2024 SpartaLog. Tüm hakları saklıdır.',
+      copyright: '© 2025 SpartaLog. Tüm hakları saklıdır.',
       privacyPolicy: 'Gizlilik Politikası',
       termsConditions: 'Kullanım Şartları',
       contact: 'İletişim'
+    },
+    contact: {
+      title: 'İletişim',
+      subtitle: 'SpartaLog ile ilgili sorularınız, önerileriniz veya geri bildirimleriniz için bizimle iletişime geçin.',
+      backToHome: 'Ana Sayfaya Dön',
+      contactInfo: 'İletişim Bilgileri',
+      email: 'E-posta',
+      emailValue: 'ibosnfs1997@gmail.com',
+      emailDesc: 'En hızlı yanıt için e-posta gönderin',
+      address: 'Adres',
+      addressValue: 'Bursa, Türkiye',
+      addressDesc: 'Geliştirici ofisi',
+      responseTime: 'Yanıt Süresi',
+      responseTimeValue: '24-48 saat',
+      responseTimeDesc: 'İş günleri içinde yanıt veriyoruz',
+      faq: 'Sık Sorulan Sorular',
+      faqItems: [
+        { question: 'Uygulama ücretsiz mi?', answer: 'Evet, SpartaLog tamamen ücretsizdir.' },
+        { question: 'Hangi platformlarda mevcut?', answer: 'Şu anda iOS için geliştirilmektedir.' },
+        { question: 'Verilerim güvenli mi?', answer: 'Evet, tüm verileriniz şifrelenmiş olarak saklanır.' }
+      ],
+      sendMessage: 'Mesaj Gönder',
+      form: {
+        fullName: 'Ad Soyad',
+        fullNamePlaceholder: 'Adınız ve soyadınız',
+        email: 'E-posta',
+        emailPlaceholder: 'ornek@email.com',
+        subject: 'Konu',
+        selectSubject: 'Konu seçin',
+        subjects: {
+          general: 'Genel Soru',
+          bug: 'Hata Bildirimi',
+          feature: 'Özellik Önerisi',
+          support: 'Teknik Destek',
+          other: 'Diğer'
+        },
+        message: 'Mesaj',
+        messagePlaceholder: 'Mesajınızı buraya yazın...',
+        send: 'Mesaj Gönder',
+        note: 'Bu form şu anda demo amaçlıdır. Gerçek iletişim için lütfen e-posta adresimizi kullanın.'
+      },
+      about: 'SpartaLog Hakkında',
+      aboutDesc: 'SpartaLog, AI teknolojisi ile güçlendirilmiş fitness takip uygulamasıdır. Antrenmanlarınızı analiz eder, ilerlemenizi takip eder ve hedeflerinize ulaşmanıza yardımcı olur.'
     }
   }
 } as const

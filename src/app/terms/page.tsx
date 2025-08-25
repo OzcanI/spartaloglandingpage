@@ -14,7 +14,7 @@ export default function TermsPage() {
           
           <div className="prose prose-lg max-w-none prose-invert">
             <p className="text-sm text-gray-400 mb-6">
-              <strong>Son Güncelleme Tarihi:</strong> 15 Aralık 2024
+              <strong>Son Güncelleme Tarihi:</strong> 25 Ağustos 2025
             </p>
 
             <section className="mb-8">
@@ -170,7 +170,7 @@ export default function TermsPage() {
                 Bu kullanım şartları hakkında sorularınız varsa, lütfen bizimle iletişime geçin:
               </p>
               <div className="bg-gray-800 p-4 rounded-lg border border-gray-700">
-                <p className="text-gray-300"><strong>Geliştirici:</strong> İbrahim Özcan</p>
+                <p className="text-gray-300"><strong>Geliştirici:</strong> İbrahim Özcan - SpartaLog uygulamasının geliştiricisi ve sağlayıcısı</p>
                 <p className="text-gray-300"><strong>E-posta:</strong> ibosnfs1997@gmail.com</p>
                 <p className="text-gray-300"><strong>Adres:</strong> Bursa, Türkiye</p>
               </div>
