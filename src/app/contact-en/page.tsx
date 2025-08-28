@@ -77,7 +77,7 @@ export default function ContactEnPage() {
                   <p><strong>Which platforms are supported?</strong> Currently being developed for iOS.</p>
                   <p><strong>Is my data secure?</strong> Yes, all your data is stored encrypted.</p>
                 </div>
-              </div> */ }
+              </div>  */ }
             </div>
 
             {/* Contact Form */}
