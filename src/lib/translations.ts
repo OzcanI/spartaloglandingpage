@@ -12,7 +12,7 @@ export const translations = {
       badge: 'AI-Powered Fitness Tracking',
       title: 'AI-Powered',
       subtitle: 'Fitness Tracking',
-      description: 'Track your workouts with AI technology, monitor your progress, and achieve your fitness goals with SpartaLog.',
+      description: 'Let SpartAI listen to your training sessions and provide you with personalized recommendations to help you achieve your fitness goals faster.',
       downloadButton: 'Download Now',
       watchDemoButton: 'Watch Demo',
       stats: {
@@ -165,7 +165,7 @@ export const translations = {
       badge: 'AI Destekli Fitness Takip',
       title: 'AI Destekli',
       subtitle: 'Fitness Takip',
-      description: 'Antrenmanlarınızı AI teknolojisi ile analiz edin, ilerlemenizi takip edin ve hedeflerinize ulaşın.',
+      description: 'SpartAI, antrenmanınızı dinler ve size kişiselleştirilmiş öneriler sunarak fitness hedeflerinize daha hızlı ulaşmanıza yardımcı olur.',
       downloadButton: 'Şimdi İndir',
       watchDemoButton: 'Demo İzle',
       stats: {
