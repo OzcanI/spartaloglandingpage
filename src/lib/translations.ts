@@ -4,6 +4,7 @@ export const translations = {
   en: {
     nav: {
       features: 'Features',
+      aiChat: 'AI Chat',
       screenshots: 'Screenshots',
       download: 'Download'
     },
@@ -39,6 +40,32 @@ export const translations = {
         }
       ]
     },
+    aiChat: {
+      title: 'AI',
+      titleHighlight: 'Chat',
+      subtitle: 'Get personalized fitness advice and workout analysis',
+      description: 'Our AI chat feature analyzes your exercise sessions and provides personalized recommendations to help you reach your fitness goals faster.',
+      features: [
+        {
+          title: 'Session Analysis',
+          description: 'AI analyzes your workout data to identify patterns and areas for improvement'
+        },
+        {
+          title: 'Personalized Advice',
+          description: 'Get tailored recommendations based on your fitness level and goals'
+        },
+        {
+          title: 'Goal Tracking',
+          description: 'AI helps you set realistic goals and tracks your progress'
+        },
+        {
+          title: '24/7 Support',
+          description: 'Get instant answers to your fitness questions anytime'
+        }
+      ],
+      cta: 'Start Chatting with AI',
+      demo: 'Try Demo Chat'
+    },
     screenshots: {
       title: 'App',
       titleHighlight: 'Interface',
@@ -46,8 +73,11 @@ export const translations = {
       items: [
         { title: 'Main Screen' },
         { title: 'Workout Detail' },
-        { title: 'Previous Workouts' },
-        { title: 'Add/Edit Workout' }
+        { title: 'Statistics' },
+        { title: 'Profile' },
+        { title: 'Settings' },
+        { title: 'Progress' },
+        { title: 'Analytics' }
       ]
     },
     stats: {
@@ -127,6 +157,7 @@ export const translations = {
   tr: {
     nav: {
       features: 'Özellikler',
+      aiChat: 'AI Sohbet',
       screenshots: 'Ekran Görüntüleri',
       download: 'İndir'
     },
@@ -162,6 +193,32 @@ export const translations = {
         }
       ]
     },
+    aiChat: {
+      title: 'AI',
+      titleHighlight: 'Sohbet',
+      subtitle: 'Kişiselleştirilmiş fitness tavsiyeleri ve antrenman analizi alın',
+      description: 'AI sohbet özelliğimiz antrenman session\'larınızı analiz eder ve fitness hedeflerinize daha hızlı ulaşmanıza yardımcı olacak kişiselleştirilmiş öneriler sunar.',
+      features: [
+        {
+          title: 'Session Analizi',
+          description: 'AI, antrenman verilerinizi analiz ederek iyileştirme alanlarını ve pattern\'leri tespit eder'
+        },
+        {
+          title: 'Kişiselleştirilmiş Tavsiye',
+          description: 'Fitness seviyenize ve hedeflerinize göre özel öneriler alın'
+        },
+        {
+          title: 'Hedef Takibi',
+          description: 'AI, gerçekçi hedefler belirlemenize ve ilerlemenizi takip etmenize yardımcı olur'
+        },
+        {
+          title: '7/24 Destek',
+          description: 'Fitness sorularınıza istediğiniz zaman anında cevap alın'
+        }
+      ],
+      cta: 'AI ile Sohbete Başla',
+      demo: 'Demo Sohbeti Dene'
+    },
     screenshots: {
       title: 'Uygulama',
       titleHighlight: 'Arayüzü',
@@ -169,8 +226,11 @@ export const translations = {
       items: [
         { title: 'Ana Ekran' },
         { title: 'Antrenman Detayı' },
-        { title: 'Önceki Antrenmanlar' },
-        { title: 'Antrenman Ekle/Düzenle' }
+        { title: 'İstatistikler' },
+        { title: 'Profil' },
+        { title: 'Ayarlar' },
+        { title: 'İlerleme' },
+        { title: 'Analitik' }
       ]
     },
     stats: {

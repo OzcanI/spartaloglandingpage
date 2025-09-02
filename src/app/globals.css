@@ -24,3 +24,41 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Swiper Custom Styles */
+.screenshots-swiper {
+  padding: 20px 0;
+}
+
+.screenshots-swiper .swiper-slide {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.screenshots-swiper .swiper-pagination {
+  bottom: -10px;
+}
+
+.screenshots-swiper .swiper-pagination-bullet {
+  background: #02cf68;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.screenshots-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.screenshots-swiper .swiper-button-disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Hide default Swiper navigation arrows */
+.screenshots-swiper .swiper-button-next,
+.screenshots-swiper .swiper-button-prev {
+  display: none;
+}
