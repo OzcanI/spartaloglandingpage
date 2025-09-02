@@ -60,7 +60,7 @@ export default function Home() {
             >
               <div className="relative">
                 <Image
-                  src="/images/logo.png"
+                  src="/images/logo.webp"
                   alt="SpartaLog"
                   width={40}
                   height={40}
@@ -629,7 +629,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-3 mb-4 md:mb-0">
               <Image
-                src="/images/logo.png"
+                src="/images/logo.webp"
                 alt="SpartaLog"
                 width={32}
                 height={32}
