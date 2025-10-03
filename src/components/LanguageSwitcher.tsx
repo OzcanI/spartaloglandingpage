@@ -5,7 +5,7 @@ import { useRouter, usePathname } from 'next/navigation'
 import { ChevronDown, Globe } from 'lucide-react'
 import { locales, localeNames, localeFlags, getLocaleFromPathname, getPathnameWithoutLocale } from '@/lib/i18n'
 
-export default function LanguageSwitcher() {
+export default function LanguageSwitcher({ yOffset = 120 }: { yOffset: number }) {
   const [isOpen, setIsOpen] = useState(false)
   const router = useRouter()
   const pathname = usePathname()
@@ -30,7 +30,7 @@ export default function LanguageSwitcher() {
       </button>
 
       {isOpen && (
-        <div className="absolute top-full right-0 mt-2 w-48 bg-gray-900 border border-gray-700 rounded-lg shadow-lg z-50 -translate-y-[120px] md:-translate-y-[0px]">
+        <div className={`absolute top-full right-0 mt-2 w-48 bg-gray-900 border border-gray-700 rounded-lg shadow-lg z-50 -translate-y-[${yOffset}px] md:-translate-y-[0px]`}>
           <div className="py-2">
             {locales.map((locale) => (
               <button
