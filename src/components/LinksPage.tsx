@@ -160,7 +160,7 @@ export default function LinksPage({ locale }: LinksPageProps) {
              {/* Back Button and Language Switcher */}
              <div className="flex justify-between items-center mb-8">
                <Link 
-                 href={locale === 'tr' ? '/links' : '/links-en'}
+                 href={locale === 'tr' ? '/tr' : '/en'}
                  className="inline-flex items-center space-x-2 text-gray-400 hover:text-[#02cf68] transition-colors"
                >
                  <ArrowLeft size={20} />
