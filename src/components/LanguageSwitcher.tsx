@@ -5,7 +5,7 @@ import { useRouter, usePathname } from 'next/navigation'
 import { ChevronDown, Globe } from 'lucide-react'
 import { locales, localeNames, localeFlags, getLocaleFromPathname, getPathnameWithoutLocale } from '@/lib/i18n'
 
-export default function LanguageSwitcher({ yOffset = 120 }: { yOffset: number }) {
+export default function LanguageSwitcher({ yOffset = 120 }: { yOffset?: number }) {
   const [isOpen, setIsOpen] = useState(false)
   const router = useRouter()
   const pathname = usePathname()
